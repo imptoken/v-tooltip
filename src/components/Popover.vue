@@ -386,9 +386,9 @@ export default {
 				return
 			}
 
-			const index = openPopovers.indexOf(this)
-			if (index !== -1) {
-				openPopovers.splice(index, 1)
+			// hide all open popovers
+			for (let i = 0; i < openPopovers.length; i++) {
+				openPopovers[i].hide()
 			}
 
 			this.isOpen = false
